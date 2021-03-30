@@ -1,10 +1,15 @@
 class Questions
-  attr_accessor :answer, :ask
+  attr_accessor :num1, :num2
 
-  def initialize()
-    @num1 = rand(1...20)
-    @num2 = rand(1...20)
-    @answer = @num1 + @num2
-    @ask = "What does #{@num1} plus #{@num2} equal?"
+  def self.num1
+    @num1 = rand(1..20)
+  end
+
+  def self.num2
+    @num2 = rand(1..20)
+  end
+
+  def self.validate(input)
+    input == (@num1 + @num2)
   end
 end
