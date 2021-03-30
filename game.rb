@@ -1,6 +1,6 @@
 class Game
-  def initialize(name)
-    @name = name
+  
+  def initialize
     @player_1 = Player.new('Player 1')
     @player_2 = Player.new('Player 2')
   end
@@ -30,9 +30,9 @@ class Game
   end
 
   def turn
-    @player_1.new_question
+    @player_1.question
     check_score
-    @player_2.new_question
+    @player_2.question
     check_score
     show_score
     puts '----- NEW TURN -----'
