@@ -17,7 +17,7 @@ class Player
     question = Question.new
     question.ask(name)
     @response = $stdin.gets.chomp
-    if question.check_answer(@response.to_i)
+    if question.validate(@response.to_i)
       puts 'YES! You are correct.'
     else
       puts 'Seriously? No!'
